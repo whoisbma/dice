@@ -81,7 +81,7 @@ const getProgram = (gl, vertexShader, fragmentShader) => {
 };
 
 const main = async () => {
-  let t = 1;
+  let t = 0;
 
   const canvas = document.getElementById('canvas');
   const gl = canvas.getContext('webgl');
@@ -235,6 +235,9 @@ const main = async () => {
     resize(canvas, gl);
   });
   addEventListener('click', (e) => {
+    roll(metaballs);
+  });
+  addEventListener('touchstart', (e) => {
     roll(metaballs);
   });
   addEventListener('keypress', (e) => {
