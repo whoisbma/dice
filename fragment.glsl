@@ -1,12 +1,4 @@
-// OK replace gl_fragcolor first call with adding a color
-// OK center in window
-// add antialiasing
-// try raymarching?
-// get positions into correct shapes
-// lerp positions on js side
-
-
-// https://www.shadertoy.com/view/MtKXRt
+// some refreshers and inspiration from: https://www.shadertoy.com/view/MtKXRt
 
 precision highp float;
 
@@ -27,18 +19,10 @@ float metaball(vec3 mb, vec2 uv, int index) {
     mb.xy += vec2(osc * u_blend);
     vec2 p = vec2(mb.xy - uv.xy);
     return mb.z*mb.z/(p.x*p.x + p.y*p.y);
-    //return r/(dot(p, p) + 0.0001);
 }
 
 void main() {
-    // vec2 p = (gl_FragCoord.xy - u_resolution*0.5) / u_resolution.y;
-
-    float oscillatingTime = sin(u_time) * 0.2 + 0.2;
-    vec2 normCoord = (gl_FragCoord.xy/u_resolution) * 0.4;
-    vec2 normMouse = (u_mouse/u_resolution) * 0.4;
-
     vec3 color = vec3(0.0505, 0.051, 0.05);
-
     float x = gl_FragCoord.x;
     float y = gl_FragCoord.y;
     float sum = 0.0;
@@ -48,14 +32,9 @@ void main() {
         sum += tot;
     }
     float thresh = sum > 1. ? 1. : 0.;
-
-    // float fwDe = fwidth(1.0);
-    // float d1 = smoothstep(0., fwDe, sum - 1.);
-
     color += vec3(pow(sum,2.)-0.999) * thresh; 
     color.r *= 0.9;
     color.b *= 0.89;
     color.g *= 0.95;
     gl_FragColor = vec4(color, 1.0);
-    // gl_FragColor = vec4(sqrt(clamp(col, 0., 1.)), 1);
 }
