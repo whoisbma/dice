@@ -1,5 +1,7 @@
 ### "dice"
 
+[Build](https://git.bryan.ma/dice/index.html)
+
 [Video](https://drive.google.com/file/d/1-is1sKZUTDhSqqebqi8rMob_nk4ysNNR/view?usp=sharing)
 
 Run via a local server or any other way you'd like!
