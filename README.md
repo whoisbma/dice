@@ -2,7 +2,7 @@
 
 [Build](https://git.bryan.ma/dice/index.html)
 
-[Video](https://drive.google.com/file/d/1-is1sKZUTDhSqqebqi8rMob_nk4ysNNR/view?usp=sharing)
+[Video](https://github.com/whoisbma/dice/blob/master/assets/video.mp4?raw=true)
 
 Run via a local server or any other way you'd like!
 
