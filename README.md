@@ -1,8 +1,8 @@
 ### "dice"
 
-[Build](https://git.bryan.ma/dice/index.html)
+[Live build](https://git.bryan.ma/dice/index.html)
 
-[Video](https://github.com/whoisbma/dice/blob/master/assets/video.mp4?raw=true)
+[Download demonstration video](https://github.com/whoisbma/dice/blob/master/assets/video.mp4?raw=true)
 
 Run via a local server or any other way you'd like!
 
